@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Introduction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container text-center my-5">
+        <h1 class="fw-bold m-5" style="color: #405cf7">GIỚI THIỆU CÁC THÀNH VIÊN</h1>
+        <div class="d-flex justify-content-center flex-wrap">
+            <div class="member-card mx-4" onclick="notice('Xin chàooo! Mình là Đào Xuân Đạt, coder của project này nè','https://www.facebook.com/xuan.datbing');">
+                <img src="daoxuandat.jpg" class="rounded-circle member-photo">
+                <h3 class="member-name w-75">Đào Xuân Đạt</h3>
+            </div>
+            <div class="member-card mx-4" onclick="notice('Hello! Tôi là Trần Nguyễn Hoàng Lâm aka Dabetz','https://www.facebook.com/profile.php?id=100067017307988');">
+                <img src="trannguyenhoanglam.jpg" class="rounded-circle member-photo">
+                <h3 class="member-name w-75">Trần Nguyễn Hoàng Lâm</h3>
+            </div>
+            <div class="member-card mx-4" onclick="notice('Toi la Vu Hoai Nam, cam on vi DA DEN','https://www.facebook.com/C9vhnam');">
+                <img src="vuhoainam.jpg" class="rounded-circle member-photo">
+                <h3 class="member-name w-75">Vũ Hoài Nam</h3>
+            </div>
+            <div class="member-card mx-4" onclick="notice('Hi! Khoa nè, đi đá banh không ?','https://www.facebook.com/minhkhoa.hoang.37454');">
+                <img src="hoangminhkhoa.jpg" class="rounded-circle member-photo">
+                <h3 class="member-name w-75">Hoàng Minh Khoa</h3>
+            </div>
+        </div>
+
+        <hr>
+        <!-- Table: Detailed information about members -->
+        <div class="my-5">
+            <h2 class="fw-bold m-5" style="color: #405cf7">THÔNG TIN THÀNH VIÊN</h2>
+            <table class="table table-hover shadow table-xl">
+                <thead class="table-info">
+                    <tr>
+                        <th scope="col">Họ và Tên</th>
+                        <th scope="col">Mục tiêu nghề nghiệp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Đào Xuân Đạt</th>
+                        <td>Lập Trình Viên</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Trần Nguyễn Hoàng Lâm</th>
+                        <td>Luật Sư</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Vũ Hoài Nam</th>
+                        <td>Giảng Viên Đại Học</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Hoàng Minh Khoa</th>
+                        <td>Cầu Thủ Bóng Đá</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+
+        <!-- Ordered List: Team tasks -->
+        <div>
+            <h2 class="fw-bold m-5" style="color: #405cf7">TIÊU CHÍ 3H</h2>
+            <ol class="d-flex justify-content-around flex-wrap">
+                <div class="card p-5 shadow task-card fw-bold" id="tc1">
+                    <li>Hài hước</li>
+                </div>
+                <div class="card p-5 shadow task-card fw-bold" id="tc2">
+                    <li>Hòa đồng</li>
+                </div>
+                <div class="card p-5 shadow task-card fw-bold" id="tc3">
+                    <li>Hoàn hảo</li>
+                </div>
+            </ol>
+        </div>
+        <hr class="mt-5">
+        <h2 class="text-center fw-bold" style="color: #d83ee3; margin-top: 40px;">NGHE NHẠC CHO ĐỠ BUỒN NÈ</h2>
+        <audio autoplay loop controls>
+            <source src="music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    
+    
+    <footer class="bg-light py-3 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">Copyright &copy; 2024 by <a href="https://www.facebook.com/xuan.datbing" target="_blank" class="text-decoration-none">
+                Đào Xuân Đạt
+            </a></p>
+            
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- SweetAlert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- YouTube API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <!-- Custom Script -->
+    <script>
+        function notice(text, link){
+            Swal.fire({
+                title: "Hello",
+                text: text,
+                icon: 'info',
+                footer: '<a target=”_blank” href="'+link+'">Facebook</a>',
+                confirmButtonText: 'Close'
+            });
+        }
+    </script>
+
+</body>
+<style>
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/* General */
+*{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+img{
+    width: 10vw;
+    height: 10vw;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2 {
+    color: #343a40;
+    margin-bottom: 30px;
+}
+
+.member-name{
+    margin:auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.member-card {
+    transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+}
+
+.table {
+    margin-top: 20px;
+}
+
+#tc1{
+    background-image: linear-gradient(to right bottom, #294df0, #0abaf4);
+    color: white;
+}
+#tc2{
+    background-image: linear-gradient(to right bottom, #007832, #cdf40a);
+    color: white;
+}
+#tc3{
+    background-image: linear-gradient(to right bottom, #da1bef, #4d48da);
+    color: white;
+}
+
+
+ol {
+    list-style-position: inside;
+}
+
+.task-card {
+    transition: transform 0.3s ease-in-out;
+    width: 15vw;
+}
+
+.task-card:hover {
+    transform: scale(1.2);
+}
+
+/* Phone Screen Responsive */
+@media only screen and (max-width: 990px){
+    img{
+        width: 40vw;
+        height: 40vw;
+        object-fit: cover;
+    }
+    .task-card{
+        width: 80vw;
+    }
+}
+</style>
+</html>
