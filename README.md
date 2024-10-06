@@ -1,0 +1,3 @@
+Main File is index.html
+Open it with a browser like Chrome, CocCoc, Edge, Firefox, ...
+DON'T COPY ME!!!
